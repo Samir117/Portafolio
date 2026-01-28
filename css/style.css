@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+a{
+ background-color: #0f172a;
+ padding: 1rem;
+ margin-top: 1rem;
+ border-radius: 30px; 
+}
+
+a:hover{
+  background-color: #38bdf8;
+  color: #020617 !important;
+}
+body {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.header {
+  text-align: center;
+  padding: 80px 20px;
+  background: #020617;
+}
+
+.header h1 {
+  font-size: 3rem;
+}
+
+.header p {
+  color: #38bdf8;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+.about img {
+  width: 180px;
+  max-width: 100%;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+  margin: 0 auto;
+  display: block;
+}
+
+.about h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.about p {
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+/* CONTENEDOR DE CARDS */
+.projects {
+    display: flex;
+    flex-wrap: wrap;           /* Permite que las cards bajen de línea si no caben */
+    justify-content: center;   /* Centra horizontalmente todas las cards */
+    gap: 1.5rem;               /* Espacio entre cards */
+}
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.projects h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #38bdf8;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.project-card .tech {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+.project-card {
+  background: #1e293b;
+  padding: 24px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+/* estilos de botones*/
+.project-card a
+{
+  position: relative;
+  display: inline-block;
+  padding: 10px 18px;
+  color: #38bdf8;
+  text-decoration: none;
+  border-radius: 30px;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+}
+
+
+/* Capa de animación */
+.project-card a::before {
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #38bdf8;
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+/* Hover */
+.project-card a:hover::before {
+  width: 100%;
+}
+
+.project-card a:hover {
+  color: #0f172a;
+}
+
+
+/* final de estilo d botones */
+
+
+.contact p {
+  margin: 10px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+}
+
+
+.skills h1{
+  margin-bottom: 20px;
+  font-size: 2rem;
+
+}
+
+
+/* estilos de la barras de skills*/
+
+.skill {
+  margin-bottom: 26px;
+  position: relative;
+}
+
+/* Nombre */
+.skill span {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+/* Barra base */
+.bar {
+  width: 100%;
+  height: 12px;
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Progreso */
+.progress {
+  height: 100%;
+  background: #38bdf8;
+  border-radius: 10px;
+}
+
+/* Porcentaje ARRIBA A LA IZQUIERDA */
+.skill::after {
+  content: attr(data-percent);
+  position: absolute;
+  right: 0;
+  top: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+s
+
+/* Niveles */
+.progress.html { width: 100%; }
+.progress.bootstrap { width: 100%; }
+.progress.wordpress { width: 100%; }
+.progress.js { width: 90%; }
+.progress.mysql { width: 70%; }
+.progress.python { width: 50%; }
+.progress.react { width: 70%; }
+s
+/* estilos de tecnologias utilizadas por proyecto*/
+
+.tech {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  
+  font-size: 0.85rem;
+  
+  color: #94a3b8;
+}
+
+.tech strong {
+  color: #38bdf8;
+}
+
+
+
+/* estilos de footer*/
+
+
+.footer {
+  background: #020617;
+  padding: 50px 20px;
+  margin-top: 80px;
+  
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #38bdf8;
+  
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #94a3b8;
+
+
+}
+
+.footer-links span {
+  display: inline-block;
+  min-width: 90px;
+  color: #e5e7eb;
+  font-weight: 600;
+  margin-bottom: 2rem;
+
+}
+
+.footer-links a {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+}
+
+.footer-links a:hover {
+  color: #7dd3fc;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+
+
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablets */
+@media (min-width: 768px) {
+  .about {
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+  }
+
+  .about img {
+    margin: 0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .about {
+    grid-template-columns: 220px 1fr;
+    gap: 60px;
+  }
+}
